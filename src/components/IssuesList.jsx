@@ -34,7 +34,7 @@ class IssuesList extends Component {
                         <ul>
                             <li>{issue.title}</li>
                             <li>{issue.body}</li>
-                            <li>{issue.url}</li>
+                            <a href={issue.url}>{issue.url}</a>
                         </ul>
                     </div>
 
