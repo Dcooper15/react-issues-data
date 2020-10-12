@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-
+import "./IssuesList.css";
 class IssuesList extends Component {
     state = {
       issueData: [],
@@ -26,14 +26,17 @@ class IssuesList extends Component {
 
     return (
         <>
-            <div className="posts">
+            <div className="allposts">
           
                 {
                     issueData.map((issue, index) => (
-                    <ul>
-                        <li>{issue.title}</li>
-                    
-                    </ul>
+                    <div className="posts">
+                        <ul>
+                            <li>{issue.title}</li>
+                            <li>{issue.body}</li>
+                            <li>{issue.url}</li>
+                        </ul>
+                    </div>
 
                     ))
                 }
